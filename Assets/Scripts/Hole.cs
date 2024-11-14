@@ -11,6 +11,7 @@ public class Hole : MonoBehaviour
     {
         if (other.gameObject.name == "Ball")
         {
+             Debug.Log("La pilota ha entrat al forat!"); 
             ball = other.gameObject;
             ball.SetActive(false);
             Invoke("HandleGoal", 2);
