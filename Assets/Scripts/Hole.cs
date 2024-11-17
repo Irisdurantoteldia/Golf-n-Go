@@ -2,35 +2,18 @@ using UnityEngine;
 
 public class Hole : MonoBehaviour
 {
-    private GameObject ball;
+    private GameManager gameManager;
 
-    public string targetScene;
-    public bool isExitHole = false; // Indica si aquest forat és el d'exit
-
-    private void OnTriggerEnter2D(Collider2D other)
+    void Start()
     {
-        if (other.gameObject.name == "Ball")
-        {
-             Debug.Log("La pilota ha entrat al forat!"); 
-            ball = other.gameObject;
-            ball.SetActive(false);
-            Invoke("HandleGoal", 2);
-        }
+        gameManager = GameManager.Instance; // Obtenim la instància del GameManager
     }
 
-    private void HandleGoal()
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (isExitHole)
+        if (other.CompareTag("Ball")) // Assegura't que la pilota té el tag "Ball"
         {
-            #if UNITY_EDITOR
-                Debug.Log("Fi del joc. Gràcies per jugar!"); // Missatge per l'Editor
-            #else
-                Application.Quit(); // Tanca el joc en una build
-            #endif
-        }
-        else if (!string.IsNullOrEmpty(targetScene))
-        {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(targetScene); // Carrega l'escena especificada
+            gameManager.BallInHole(); // Notifiquem al GameManager que la pilota ha entrat al forat
         }
     }
 }

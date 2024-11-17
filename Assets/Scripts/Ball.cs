@@ -16,6 +16,8 @@ public class Ball : MonoBehaviour
     // Array per especificar noms d'escenes on el tir es reflectirà
     public string[] invertedLevelNames;
 
+    private bool isMoving = false; // Detecta si la pilota ja està en moviment
+
     void Start()
     {
         forceSlider.gameObject.SetActive(false); 
@@ -38,7 +40,7 @@ public class Ball : MonoBehaviour
         Vector2 direction = (mousePosition - transform.position).normalized;
         Vector2 velocity = GetComponent<Rigidbody2D>().velocity;
 
-        if (velocity.magnitude <= 0.02)
+        if (velocity.magnitude <= 0.02f)
         {
             velocity = Vector2.zero;
             lineRenderer.enabled = true;
@@ -46,9 +48,14 @@ public class Ball : MonoBehaviour
         else
         {
             lineRenderer.enabled = false;
+            if (!isMoving) // Si la pilota comença a moure's, incrementem els hits
+            {
+                GameManager.Instance.IncrementHits(); // Incrementa els cops quan la pilota comença a moure
+                isMoving = true;  // Evitem que el comptador s'incremeti més d'una vegada
+            }
         }
 
-        if (velocity.magnitude <= 0.02)
+        if (velocity.magnitude <= 0.02f)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {

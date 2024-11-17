@@ -535,8 +535,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: 
-  totalScore: 0
-  topScores: 
+  totalHits: 0
+  maxScores: 5
+  levels: []
+  playerScoreText: {fileID: 0}
+  rankingText: {fileID: 0}
+  playerNameInput: {fileID: 0}
+  startButton: {fileID: 0}
 --- !u!4 &228208716
 Transform:
   m_ObjectHideFlags: 0
@@ -1305,6 +1310,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goal
       objectReference: {fileID: 0}
+    - target: {fileID: 4802946078385518231, guid: 265f7901bb7606346b625f6e341fc080, type: 3}
+      propertyPath: m_TagString
+      value: Hole
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1330,8 +1339,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 093abe3c28cea3f4b90427238cf326a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetScene: Level4
-  isExitHole: 0
 --- !u!1 &979815318
 GameObject:
   m_ObjectHideFlags: 0
@@ -2152,6 +2159,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2457033894303034277, guid: 9a291cccade8acb42a8263950ff05500, type: 3}
       propertyPath: m_Name
+      value: Ball
+      objectReference: {fileID: 0}
+    - target: {fileID: 2457033894303034277, guid: 9a291cccade8acb42a8263950ff05500, type: 3}
+      propertyPath: m_TagString
       value: Ball
       objectReference: {fileID: 0}
     - target: {fileID: 4748745181279562773, guid: 9a291cccade8acb42a8263950ff05500, type: 3}
