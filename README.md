@@ -1,41 +1,41 @@
 # Golf n Go ⛳
 
-Un joc de golf arcade desenvolupat amb Unity amb 5 nivells progressius de dificultat.
+An arcade golf game developed with Unity featuring 5 progressive levels.
 
-## 🎮 Com jugar
+## 🎮 How to Play
 
 ### Controls
-- **Mantenir clic/botó**: Carrega la potència del tir
-- **Soltar**: Dispara la pilota
+- **Hold click/button**: Charge shot power
+- **Release**: Shoot the ball
 
-### Sistema de potència
-Quan mantens apretat, una **barra de potència** es carrega progressivament:
-- 🟢 **Verd**: Potència baixa
-- 🟡 **Groc**: Potència mitjana  
-- 🔴 **Vermell**: Potència màxima
+### Power System
+When holding, a **power bar** charges progressively:
+- 🟢 **Green**: Low power
+- 🟡 **Yellow**: Medium power  
+- 🔴 **Red**: Maximum power
 
-### Objectiu
-Ficar la pilota al forat amb el mínim nombre de cops possibles!
+### Objective
+Get the ball in the hole with the fewest strokes possible!
 
-## 🗺️ Nivells
-El joc consta de **5 nivells** amb dificultat creixent.
+## 🗺️ Levels
+The game consists of **5 levels** with increasing difficulty.
 
 ## ⚠️ Obstacles
 
-| Obstacle | Efecte |
+| Obstacle | Effect |
 |----------|--------|
-| 🟤 **Terra (sorra/fang)** | Alenteix la pilota |
-| 💧 **Aigua** | Penalització / reinici |
-| 🪨 **Roques** | Bloquegen el camí |
+| 🟤 **Terrain (sand/mud)** | Slows down the ball |
+| 💧 **Water** | Penalty / reset |
+| 🪨 **Rocks** | Block the path |
 
-## 🛠️ Tecnologia
-- **Motor**: Unity
-- **Llenguatge**: C#
+## 🛠️ Technology
+- **Engine**: Unity
+- **Language**: C#
 
-## 📦 Instal·lació
-1. Clona el repositori
-2. Obre el projecte amb Unity
-3. Executa la escena principal
+## 📦 Installation
+1. Clone the repository
+2. Open the project with Unity
+3. Run the main scene
 
 ---
-Fet amb ❤️ per [@Irisdurantoteldia](https://github.com/Irisdurantoteldia)
+Made with ❤️ by [@Irisdurantoteldia](https://github.com/Irisdurantoteldia)
