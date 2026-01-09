@@ -36,6 +36,4 @@ The game consists of **5 levels** with increasing difficulty.
 1. Clone the repository
 2. Open the project with Unity
 3. Run the main scene
-
----
-Made with ❤️ by [@Irisdurantoteldia](https://github.com/Irisdurantoteldia)
+   
